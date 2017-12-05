@@ -1,0 +1,16 @@
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\bin\Debug\LAb1_SW.exe.config
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\bin\Debug\LAb1_SW.exe
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\bin\Debug\LAb1_SW.pdb
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\bin\Debug\EntityFramework.dll
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\bin\Debug\EntityFramework.xml
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\obj\Debug\LAb1_SW.AddS.resources
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\obj\Debug\LAb1_SW.Form1.resources
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\obj\Debug\LAb1_SW.Migrations.InitialCreate.resources
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\obj\Debug\LAb1_SW.Properties.Resources.resources
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\obj\Debug\LAb1_SW.csproj.GenerateResource.Cache
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\obj\Debug\LAb1_SW.exe
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\obj\Debug\LAb1_SW.pdb
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\obj\Debug\LAb1_SW.csprojResolveAssemblyReference.cache
+C:\Users\AND\Documents\Visual Studio 2015\Projects\LAb1_SW\LAb1_SW\obj\Debug\LAb1_SW.AddB.resources

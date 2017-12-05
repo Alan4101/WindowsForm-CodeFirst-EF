@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="IdBook" />
+    </Key>
+    <Property Name="IdBook" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="description_n" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="SageBook" Relationship="Self.FK_SageBook_Book" FromRole="Book" ToRole="SageBook" />
+  </EntityType>
+  <EntityType Name="Sage">
+    <Key>
+      <PropertyRef Name="idSage" />
+    </Key>
+    <Property Name="idSage" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="age" Type="Int32" Nullable="false" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="SageBook" Relationship="Self.FK_Sage_SageBook" FromRole="Sage" ToRole="SageBook" />
+  </EntityType>
+  <EntityType Name="SageBook">
+    <Key>
+      <PropertyRef Name="idSage" />
+    </Key>
+    <Property Name="idSage" Type="Int32" Nullable="false" />
+    <Property Name="idBook" Type="Int32" />
+    <NavigationProperty Name="Book" Relationship="Self.FK_SageBook_Book" FromRole="SageBook" ToRole="Book" />
+    <NavigationProperty Name="Sage" Relationship="Self.FK_Sage_SageBook" FromRole="SageBook" ToRole="Sage" />
+  </EntityType>
+  <Association Name="FK_SageBook_Book">
+    <End Role="Book" Type="Self.Book" Multiplicity="0..1" />
+    <End Role="SageBook" Type="Self.SageBook" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="IdBook" />
+      </Principal>
+      <Dependent Role="SageBook">
+        <PropertyRef Name="idBook" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sage_SageBook">
+    <End Role="SageBook" Type="Self.SageBook" Multiplicity="1" />
+    <End Role="Sage" Type="Self.Sage" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="SageBook">
+        <PropertyRef Name="idSage" />
+      </Principal>
+      <Dependent Role="Sage">
+        <PropertyRef Name="idSage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Book" EntityType="Self.Book" />
+    <EntitySet Name="Sage" EntityType="Self.Sage" />
+    <EntitySet Name="SageBook" EntityType="Self.SageBook" />
+    <AssociationSet Name="FK_SageBook_Book" Association="Self.FK_SageBook_Book">
+      <End Role="Book" EntitySet="Book" />
+      <End Role="SageBook" EntitySet="SageBook" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sage_SageBook" Association="Self.FK_Sage_SageBook">
+      <End Role="SageBook" EntitySet="SageBook" />
+      <End Role="Sage" EntitySet="Sage" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
